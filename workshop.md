@@ -8,7 +8,7 @@
 ### Clone aerospike-monitoring repo
 
 ```
-git clone 
+git clone https://github.com/aerospike/aerospike-monitoring.git && \
 cd aerospike-monitoring
 ```
 
