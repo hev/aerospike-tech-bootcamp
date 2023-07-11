@@ -68,6 +68,7 @@ asconfig convert -f aerospike.conf -a 6.2.0 > aerospike.yaml
 ```
 
 4. Make a change - e.g. remove security section
+(note: it is helpful to load schema files into your [IDE](https://docs.aerospike.com/tools/asconfig#editor-supported-real-time-schema-validation) )
 
 5. Convert back to a conf file
 
@@ -78,7 +79,7 @@ asconfig convert -f aerospike.yaml -a 6.2.0 > aerospike-new.conf
 6. Compare the two conf files
 
 ```
-
+asconfig diff aerospike.conf aerospike-new.conf
 ```
 
 

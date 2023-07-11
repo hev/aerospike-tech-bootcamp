@@ -3,7 +3,7 @@
 ### Pre-requisites
 
 1. Docker & docker-compose - you probably already have this. 
-1. Aerolab version 6.2.0 - the very latest version has some additional dashboars you'll want for this demo.
+1. [Aerolab 6.2+](https://github.com/aerospike/aerolab/releases/tag/6.2.0-0dc1bb4) - the draft release latest version has some additional dashboards you'll want for this demo.
 
 ### Clone aerospike-monitoring repo
 
