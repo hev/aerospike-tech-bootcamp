@@ -1,14 +1,10 @@
-# Tech Bootcamp Companion Materials
-This repo contains helpful links, references, and commands
-for my Aerospike Tech Bootcamp training. Use it to follow along
-with my presentation and workshop content. 
 
 ## Aerospike Observability
 
 ### Using the Metric Reference
 When your working on observability projects it's incredibly 
 important to know what your looking at. The Aerospike 
-[metric-refernce]() should be open up in a tab. There's a few things to note
+[metric-reference]() should be open up in a tab. There's a few things to note
 about how to use the guide.
 
 * Metric Location - determins what API the metric is from and will determine what
@@ -62,8 +58,28 @@ You can now convert, validate, and compare YAML files to one another. Here's a q
 example walk through. 
 
 1. Start by getting the latest tools package.
-2. Change into the 
 
+2. Change into the `/config/` directory
+
+3. Convert the `aerospike.conf` file to `aerospike.yaml`
+
+```
+asconfig convert -f aerospike.conf -a 6.3.0.1 > aerospike.yaml
+```
+
+4. Make a change - e.g. remove security section
+
+5. Convert back to a conf file
+
+```
+asconfig convert -f aerospike.yaml -a 6.3.0.1 > aerospike-new.conf
+```
+
+6. Compare the two conf files
+
+```
+
+```
 
 
 
