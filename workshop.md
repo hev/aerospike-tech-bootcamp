@@ -25,6 +25,7 @@ Once you're done go ahead and tear it back down
 docker compose down
 ```
 
+
 ### Try the aerolab example (5 minutes)
 ```
 cd ../aerolab/ 
@@ -59,11 +60,29 @@ Let's use asadm and set quotas (new feature) to set of an alert.
 ```
 aerolab attach shell -n dc1
 ```
-1. run `asadm` and enable management mode
+1. run `asadm` and `enable` management mode
 1. use the `manage config` command to set the stop-write size on the set `testset` to something very low
 1. navigate back to the overview dashboard
 
 
 
+### Send to datadog using OTEL
+ Go to the OTEL example folder.
+
+ ```
+ cd ../OTEL/
+ ``
+
+Start an aerospike server
+ ```
+docker run -d --name aerospike -p 3000-3002:3000-3002 aerospike/aerospike-server-enterprise
+ ```
+
+Open the `datadog-otel-collector-config.yml` file and add API key and URL
+
+Deploy the exporter and OTEL collector
+```
+docker-compose -f datadog-docker-compose.yml up
+```
 
 
